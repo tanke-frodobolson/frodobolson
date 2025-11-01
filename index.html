@@ -7,7 +7,7 @@
   <!-- Preload fonts - vintage/adventure style to match logo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Crimson+Text:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:wght@400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
@@ -23,57 +23,124 @@
       </div>
     </div>
     <nav class="nav">
+      <a href="#promociones">Promociones</a>
       <a href="#galeria">Galería</a>
       <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
     </nav>
     <div class="header-controls">
-      <label for="fontSelect" class="small">Tipografía</label>
-      <select id="fontSelect" aria-label="Seleccionar tipografía">
-        <option value="'Merriweather', Georgia, 'Times New Roman', serif">Merriweather</option>
-        <option value="'Crimson Text', Georgia, 'Times New Roman', serif">Crimson Text</option>
-        <option value="'Courier Prime', 'Courier New', monospace">Courier Prime</option>
-      </select>
+      <a href="#contacto" class="header-cta">
+        <i class="fas fa-calendar-check"></i> Reservar
+      </a>
     </div>
   </header>
 
   <main class="container">
-    <div class="promo-banner">
-      <h2><i class="fas fa-gift"></i> PROMO DICIEMBRE 2X1 <i class="fas fa-gift"></i></h2>
-      <p><strong>Del 20/12 al 31/12:</strong> Si te quedás más de 1 noche tenés una gratuita!</p>
-    </div>
-
     <section class="hero">
       <div class="intro card">
+        <img src="img/home.jpg" alt="">
         <h2>Bienvenido a Camping Frodo Bolsón</h2>
         <p>¿Estás buscando un lugar ideal para acampar y relajarte en estas vacaciones? ¡Vení a Frodo Bolsón!</p>
         <p>Nuestro camping cuenta con un predio de <strong>5000m²</strong> ubicado frente al río Quemquemtreu. Con un entorno tranquilo para disfrutar en familia o con amigos.</p>
-        <p class="row"><span class="badge">Frente al río</span><span class="small">5000m² de naturaleza</span></p>
         <p><a class="cta" href="#contacto">Reservá ahora</a></p>
       </div>
 
       <aside class="card">
-        <h3>Información destacada</h3>
+        <h3><i class="fas fa-star"></i> Información destacada</h3>
         <p class="small">Un lugar ideal para relajarse y disfrutar de la naturaleza.</p>
-        <ul>
-          <li>Frente al río Quemquemtreu</li>
-          <li>Wi-Fi disponible</li>
-          <li><strong>No cobramos carpa</strong></li>
-          <li>Estacionamiento incluido</li>
+        <ul class="info-list">
+          <li><i class="fas fa-water"></i> Frente al río Quemquemtreu</li>
+          <li><i class="fas fa-wifi"></i> Wi-Fi disponible</li>
+          <li><i class="fas fa-campground"></i>No cobramos carpa</li>
+        </ul>
+        <p class="small"><i class="fas fa-clock"></i> <strong>Horarios</strong></p>
+        <ul class="info-list">
+          <li><i class="fas fa-arrow-right-to-bracket"></i> Check-in: hasta las 22:00hs</li>
+          <li><i class="fas fa-arrow-right-from-bracket"></i> Check-out: 10:00hs</li>
         </ul>
       </aside>
+
     </section>
 
     <section id="galeria" class="card">
       <h2>Galería de fotos</h2>
       <p class="small">Click en una imagen para ampliarla.</p>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> Todas
+        </button>
+        <button class="filter-btn" data-filter="instalaciones">
+          <i class="fas fa-campground"></i> Instalaciones
+        </button>
+        <button class="filter-btn" data-filter="naturaleza">
+          <i class="fas fa-tree"></i> Naturaleza
+        </button>
+        <button class="filter-btn" data-filter="actividades">
+          <i class="fas fa-hiking"></i> Actividades
+        </button>
+      </div>
+
       <div class="gallery">
-        <img src="img/1.png" alt="camping-1">
-        <img src="img/2.png" alt="camping-2">
-        <img src="img/3.jpg" alt="camping-3">
-        <img src="img/4.png" alt="camping-4">
-        <img src="img/5.png" alt="camping-5">
-        <img src="img/6.png" alt="camping-6">
+        <img src="img/instalaciones/1.webp" alt="Instalaciones del camping" data-category="instalaciones">
+        <img src="img/naturaleza/1.webp" alt="Vista del río" data-category="naturaleza">
+        <img src="img/instalaciones/2.webp" alt="Zona de acampe" data-category="instalaciones">
+        <img src="img/naturaleza/2.webp" alt="Paisaje natural" data-category="naturaleza">
+        <img src="img/actividades/1.webp" alt="Actividades recreativas" data-category="actividades">
+        <img src="img/instalaciones/3.webp" alt="Vista general" data-category="instalaciones">
+        <img src="img/naturaleza/3.webp" alt="Naturaleza y entorno" data-category="naturaleza">
+        <img src="img/actividades/2.webp" alt="Actividades al aire libre" data-category="actividades">
+        <img src="img/instalaciones/6.webp" alt="Servicios del camping" data-category="instalaciones">
+        <img src="img/naturaleza/4.webp" alt="Paisaje del río" data-category="naturaleza">
+        <img src="img/instalaciones/7.webp" alt="Áreas comunes" data-category="instalaciones">
+        <img src="img/instalaciones/8.webp" alt="Espacios del camping" data-category="instalaciones">
+      </div>
+    </section>
+
+    <section id="promociones" class="promotions-section">
+      <h2><i class="fas fa-tag"></i> Promociones Especiales</h2>
+      <p class="small">Aprovechá nuestras promociones por estadías prolongadas y grupos</p>
+
+      <div class="promotions-grid">
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fas fa-calendar-week"></i>
+          </div>
+          <h3>Estadía Prolongada</h3>
+          <div class="promo-details">
+            <div class="promo-item">
+              <span class="promo-duration">7 noches o más</span>
+              <span class="promo-discount">10% de descuento</span>
+            </div>
+            <div class="promo-item">
+              <span class="promo-duration">14 noches o más</span>
+              <span class="promo-discount">15% de descuento</span>
+            </div>
+          </div>
+          <p class="promo-note small">Ideal para disfrutar una larga temporada</p>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Grupos</h3>
+          <div class="promo-details">
+            <div class="promo-item">
+              <span class="promo-duration">4 a 6 personas</span>
+              <span class="promo-discount">5% de descuento</span>
+            </div>
+            <div class="promo-item">
+              <span class="promo-duration">7 o más personas</span>
+              <span class="promo-discount">10% de descuento</span>
+            </div>
+          </div>
+          <p class="promo-note small">Perfecto para grupos y familias numerosas</p>
+        </div>
+
+      </div>
+
+      <div class="promo-footer">
+        <p class="small"><i class="fas fa-info-circle"></i> Las promociones no son acumulables entre sí. Consultá condiciones al reservar.</p>
       </div>
     </section>
 
@@ -97,8 +164,8 @@
           <p>Tomacorrientes disponibles y conexión Wi-Fi para mantenerte conectado.</p>
         </div>
         <div class="service">
-          <h3><i class="fas fa-store"></i> Proveeduría</h3>
-          <p>Pequeña tienda con productos esenciales y bebidas para tu estadía.</p>
+            <h3><i class="fas fa-store"></i> Proveeduría</h3>
+            <p>Pequeña tienda con productos esenciales, cerveza artesanal y bebidas para tu estadía.</p>
         </div>
         <div class="service">
           <h3><i class="fas fa-lock"></i> Guardaequipaje</h3>
@@ -110,11 +177,11 @@
       <div class="services">
         <div class="service">
           <h3><i class="fas fa-volleyball"></i> Deportes</h3>
-          <p>Cancha de voley, mesa de ping-pong y metegol para disfrutar con amigos y familia.</p>
+          <p>Cancha de voley, futbol-tenis, mesa de ping-pong y metegol para disfrutar con amigos y familia.</p>
         </div>
         <div class="service">
           <h3><i class="fas fa-person-rowing"></i> Alquiler de Kayaks</h3>
-          <p>Explorá el río Quemquemtreu en kayak. Consultar disponibilidad y tarifas.</p>
+          <p>Explorá los lagos en kayak. Consultar disponibilidad y tarifas.</p>
         </div>
         <div class="service">
           <h3><i class="fas fa-bicycle"></i> Alquiler de Bicicletas</h3>
@@ -131,8 +198,17 @@
           <label for="name">Nombre</label>
           <input id="name" name="name" required placeholder="Tu nombre completo">
 
-          <label for="guests">Cantidad de personas</label>
-          <input id="guests" name="guests" type="number" min="1" required placeholder="Ej: 2">
+          <label for="checkin">Check-in</label>
+          <input id="checkin" name="checkin" type="text" required placeholder="Seleccionar fecha" readonly>
+
+          <label for="checkout">Check-out</label>
+          <input id="checkout" name="checkout" type="text" required placeholder="Seleccionar fecha" readonly>
+
+          <label for="guests">Cantidad de adultos</label>
+          <input id="guests" name="guests" type="number" min="0" value="1" required placeholder="Ej: 2">
+
+          <label for="children">Cantidad de menores de 12 años</label>
+          <input id="children" name="children" type="number" min="0" value="0" placeholder="Ej: 1">
 
           <button type="submit" class="btn-whatsapp">
             <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
@@ -149,15 +225,13 @@
       <aside class="card">
         <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
         <p class="small">Frente al río Quemquemtreu, El Bolsón, Río Negro</p>
-        <p class="small">Predio de 5000m² con estacionamiento incluido</p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.123189978228!2d-71.54754422461563!3d-41.97616478319262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961b95d0b6cf50db%3A0x74920d52f4533ef4!2sCamping%20frodo%20bolson!5e0!3m2!1sen!2sar!4v1761956464619!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
         <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
         <p class="small"><a href="https://wa.me/5492944936080" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> +54 294 493-6080</a></p>
         <p class="small">Reservá ahora por WhatsApp</p>
-
-        <h3><i class="fas fa-info-circle"></i> Importante</h3>
-        <p class="small"><strong>No cobramos carpa</strong></p>
-        <p class="small">Estacionamiento gratuito</p>
       </aside>
     </section>
 
@@ -168,6 +242,33 @@
 
   <div class="lightbox" aria-hidden="true">
     <img alt="Imagen ampliada">
+  </div>
+
+  <!-- Custom Date Picker Modal -->
+  <div class="date-modal" id="dateModal" aria-hidden="true">
+    <div class="date-modal-content">
+      <div class="date-modal-header">
+        <h3 id="dateModalTitle">Seleccionar fecha</h3>
+        <button class="date-modal-close" id="dateModalClose" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="date-modal-body">
+        <div class="calendar-nav">
+          <button type="button" id="prevMonth" aria-label="Mes anterior">&laquo;</button>
+          <div id="currentMonth"></div>
+          <button type="button" id="nextMonth" aria-label="Mes siguiente">&raquo;</button>
+        </div>
+        <div class="calendar-weekdays">
+          <div>Dom</div>
+          <div>Lun</div>
+          <div>Mar</div>
+          <div>Mié</div>
+          <div>Jue</div>
+          <div>Vie</div>
+          <div>Sáb</div>
+        </div>
+        <div class="calendar-days" id="calendarDays"></div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
